@@ -145,6 +145,7 @@ body {
     .thumbnail-container {
       overflow: hidden;
     }
+    
     .thumbnail {
       overflow: hidden;
       transition: all .5s;
@@ -156,10 +157,39 @@ body {
     }
     
     /* css for modal image */
-    .modal-image {
-      max-width: 384px;
-      height: auto;
-      border: 1px solid #fff;
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      .modal-image {
+        max-width: 500px;
+        height: auto;
+        border: 1px solid #fff;
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
     }
   }
 }

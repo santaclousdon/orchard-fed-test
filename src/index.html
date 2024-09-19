@@ -9,18 +9,18 @@
 <body>
   <main>
     <section class='section-one responsive-grid'>
-      <article class='col-one-three thumbnail-container'>
+      <article class='col-one-three thumbnail-container' data-modal="#imageModal1">
         <div class='thumbnail'>
           <img src="./images/Image-01.jpg" alt='img-01.jpg'/>
         </div>
       </article>
       <article class='col-one-three'>
-        <div class='row-half thumbnail-container'>
+        <div class='row-half thumbnail-container' data-modal="#imageModal2">
           <div class='thumbnail'>
             <img src="./images/Image-02.jpg" alt='img-02.jpg'/>
           </div>
         </div>
-        <div class='row-half thumbnail-container'>
+        <div class='row-half thumbnail-container' data-modal="#imageModal3">
           <div class='thumbnail'>
             <img src="./images/Image-03.jpg" alt='img-03.jpg' />
           </div>
@@ -44,6 +44,26 @@
           </p>
         </div>
       </article>
+
+      <!-- Modals -->
+      <div id="imageModal1" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+          <img  class="modal-image" id="img01" src="./images/Image-01_2x.jpg">
+        </div>
+      </div>
+      <div id="imageModal2" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+          <img  class="modal-image" id="img02" src="./images/Image-02_2x.jpg">
+        </div>
+      </div>
+      <div id="imageModal3" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+          <img  class="modal-image" id="img03" src="./images/Image-03_2x.jpg">
+        </div>
+      </div>
     </section>
     <section class='section-two'>
       <header>ALL THE LATEST FROM AEG</header>
@@ -51,7 +71,7 @@
         <article class='col-one-three'>
           <div class='thumbnail-container'>
             <div class='thumbnail'>
-              <img src="./images/Image-04.jpg" alt='img-01.jpg' />
+              <img src="./images/Image-04.jpg" alt='img-04.jpg' />
             </div>
           </div>
           <div class='details'>
