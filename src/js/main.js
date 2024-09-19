@@ -18,9 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Capture anchor clicks
     document.querySelectorAll('.anchor-click').forEach(anchor => {
         anchor.addEventListener('click', function(event) {
-            console.log('Anchor clicked:', event.currentTarget); // event.currentTarget is the <a> element
+            console.log('Anchor clicked:', event.currentTarget.getAttribute('description'));
             event.preventDefault();
-            // Optionally stop propagation from img to a
             event.stopImmediatePropagation();
         });
     });
