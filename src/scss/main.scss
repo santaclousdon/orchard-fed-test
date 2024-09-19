@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0e1414;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'OpenSans-Light', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  main {
+    max-width: 1210px;
+    padding: 0px 10px;
+    margin: auto;
+    margin-top: 185px;
+    margin-bottom: 240px;
+  
+    .responsive-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    
+    .section-two {
+      margin-top: 240px;
+    
+      header {
+        font-size: 42px;
+        font-weight: 100;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+    
+      img {
+        border-bottom: 4px solid #f00;
+      }
+    
+      .details {
+        a, .title {
+          font-size: 18px;
+          font-weight: 800;
+          color: #fff;
+          letter-spacing: 0.2px;
+          letter-spacing: 0.5px;
+        }
+    
+        .info {
+          color: #aaa;
+          line-height: 1.8;
+        }
+    
+        a {
+          font-size: 16px;
+          text-decoration: none;
+          padding-bottom: 8px;
+          border-bottom: 1px solid #f00;
+          transition: all .5s;
+    
+          &:hover {
+            color: #f00;
+          }
+        }
+      }
+    }
+    
+    .col-one-three {
+      max-width: 384px;
+      margin: auto;
+      margin-top: 0px;
+    
+      .row-half:not(:first-child) {
+        margin-top: 15px;
+      }
+    
+      .header-answer {
+        border-bottom: 1px solid #fff;
+    
+        p {
+          font-size: 27px;
+          font-weight: 100;
+          color: #ddd;
+          text-transform: uppercase;
+          margin: 0px 0px 15px 0px;
+        }
+      }
+    
+      .text-answer {
+        padding: 30px 0px;
+    
+        p {
+          font-size: 18px;
+          font-weight: 100;
+          color: #ccc;
+          line-height: 1.7;
+          margin: 0px;
+        }
+      }
+    
+      .text-mindful {
+        & p:first-child {
+          font-size: 16px;
+          font-weight: 600;
+          text-transform: uppercase;
+          animation: text-color-change 2s infinite;
+    
+          @keyframes text-color-change {
+            0% {color: red;}
+            33% {color: yellow;}
+            66% {color: cyan;}
+            100% {color: red;}
+          }
+        }
+    
+        & p:last-child {
+          font-size: 18px;
+          font-weight: 800;
+          color: #fff;
+          line-height: 1.7;
+          letter-spacing: 0.5px;
+        }
+      }
+    
+      @media (max-width: 1200px) {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    
+    /* css for image hover state */
+    .thumbnail-container {
+      overflow: hidden;
+    }
+    .thumbnail {
+      overflow: hidden;
+      transition: all .5s;
+    
+      &:hover {
+        scale: 1.05;
+        cursor: pointer;
+      }
+    }
+    
+    /* css for modal image */
+    .modal-image {
+      max-width: 384px;
+      height: auto;
+      border: 1px solid #fff;
+    }
+  }
+}
+
+
