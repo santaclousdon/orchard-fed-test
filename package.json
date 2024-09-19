@@ -4,16 +4,22 @@
     "description": "Frontend development test",
     "main": "index.js",
     "scripts": {
-      "build": "webpack --mode production",
-      "dev": "webpack --watch"
+        "serve": "webpack serve",
+        "build": "webpack --mode production",
+        "dev": "webpack --watch"
     },
-    "dependencies": {},
     "devDependencies": {
-      "css-loader": "^6.5.0",
-      "sass-loader": "^12.4.0",
-      "style-loader": "^3.3.3",
-      "webpack": "^5.58.1",
-      "webpack-cli": "^4.9.1"
+        "css-loader": "^6.11.0",
+        "file-loader": "^6.2.0",
+        "mini-css-extract-plugin": "^2.9.1",
+        "sass": "^1.79.1",
+        "sass-loader": "^12.6.0",
+        "style-loader": "^3.3.3",
+        "webpack": "^5.94.0",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^5.1.0"
+    },
+    "dependencies": {
+        "html-webpack-plugin": "^5.6.0"
     }
-  }
-  
+}
