@@ -1,0 +1,19 @@
+{
+    "name": "frontend-test",
+    "version": "1.0.0",
+    "description": "Frontend development test",
+    "main": "index.js",
+    "scripts": {
+      "build": "webpack --mode production",
+      "dev": "webpack --watch"
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "css-loader": "^6.5.0",
+      "sass-loader": "^12.4.0",
+      "style-loader": "^3.3.3",
+      "webpack": "^5.58.1",
+      "webpack-cli": "^4.9.1"
+    }
+  }
+  
