@@ -133,6 +133,20 @@ body {
           letter-spacing: 0.5px;
         }
       }
+
+      .anchor-container {
+        overflow: hidden;
+      }
+      
+      .anchor {
+        overflow: hidden;
+        transition: all .5s;
+      
+        &:hover {
+          scale: 1.05;
+          cursor: pointer;
+        }
+      }
     
       @media (max-width: 1200px) {
         &:not(:last-child) {

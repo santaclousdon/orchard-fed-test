@@ -15,7 +15,15 @@ const image5_2x = require('../images/Image-05_2x.jpg');
 const image6_2x = require('../images/Image-06_2x.jpg');
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('Images imported:', image1, image2);
+    // Capture anchor clicks
+    document.querySelectorAll('.anchor-click').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            console.log('Anchor clicked:', event.currentTarget); // event.currentTarget is the <a> element
+            event.preventDefault();
+            // Optionally stop propagation from img to a
+            event.stopImmediatePropagation();
+        });
+    });
 
     // Example: Dynamically setting images in the DOM
     const imgElement1 = document.querySelector('.image1');
