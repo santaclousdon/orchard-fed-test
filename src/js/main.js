@@ -19,9 +19,18 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".anchor-click").forEach((anchor) => {
     anchor.addEventListener("click", function (event) {
       console.log(
-        "Anchor clicked:",
+        "Anchor Tag Clicked:",
         event.currentTarget.getAttribute("description")
       );
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    });
+  });
+
+  document.querySelectorAll("a[href='#']").forEach((link) => {
+    link.addEventListener("click", function (event) {
+      console.log("Anchor Tag Clicked: Read more clicked");
+      event.preventDefault();
       event.preventDefault();
       event.stopImmediatePropagation();
     });
