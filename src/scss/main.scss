@@ -1,18 +1,16 @@
 @font-face {
   font-family: 'OpenSans-Light';
-  src: url('../fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
+  src: url('../fonts/OpenSans/OpenSans-Light.ttf') format('truetype'),
 }
-
-$baseFontFamily: -apple-system, BlinkMacSystemFont, 'OpenSans-Light', 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-$baseColor: #fff;
 
 body {
   margin: 0;
   padding: 0;
   background-color: #0e1414;
-  color: $baseColor;
-  font-family: $baseFontFamily;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'OpenSans-Light', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -22,68 +20,76 @@ body {
 
   main {
     max-width: 1250px;
-    padding: 0 30px;
-    margin: 185px auto 240px;
-
+    padding: 0px 30px;
+    margin: auto;
+    margin-top: 185px;
+    margin-bottom: 240px;
+  
     .responsive-grid {
       display: flex;
       flex-wrap: wrap;
+      flex: 0 0 33.3%;
       gap: 1rem;
-
-      article {
-        flex: 0 0 33.3%;
-
-        @media (max-width: 1280px) {
+    
+      @media (max-width: 1280px) {
+        article {
           flex: 0 0 50%;
         }
+      }
 
-        @media (max-width: 840px) {
+      @media (max-width: 840px) {
+        article {
           flex: 0 0 100%;
         }
+      }
 
-        @media (max-width: 640px) {
+      @media (max-width: 640px) {
+        width: 100%;
+        gap: 0;
+        article {
           width: 80%;
-          gap: 0;
+
         }
       }
     }
-
+    
     .section-two {
       margin-top: 240px;
-
+    
       header {
         font-size: 42px;
         font-weight: 100;
-        color: $baseColor;
+        color: #fff;
         text-transform: uppercase;
         text-align: center;
         margin-bottom: 50px;
       }
-
+    
       img {
         border-bottom: 4px solid #f00;
       }
-
+    
       .details {
         a, .title {
           font-size: 18px;
           font-weight: 800;
-          color: $baseColor;
+          color: #fff;
+          letter-spacing: 0.2px;
           letter-spacing: 0.5px;
         }
-
+    
         .info {
           color: #aaa;
           line-height: 1.8;
         }
-
+    
         a {
           font-size: 16px;
           text-decoration: none;
           padding-bottom: 8px;
           border-bottom: 1px solid #f00;
-          transition: color 0.5s;
-
+          transition: all .5s;
+    
           &:hover {
             color: #f00;
           }
@@ -116,52 +122,60 @@ body {
         }
       }
     }
-
+    
     .col-one-three {
       max-width: 384px;
       width: 100%;
-      margin: 0 auto;
-
+      margin: auto;
+      margin-top: 0px;
+    
       .row-half:not(:first-child) {
         margin-top: 15px;
       }
-
+    
       .header-answer {
-        border-bottom: 1px solid $baseColor;
-
+        border-bottom: 1px solid #fff;
+    
         p {
           font-size: 27px;
           font-weight: 100;
           color: #ddd;
           text-transform: uppercase;
-          margin-bottom: 15px;
+          margin: 0px 0px 15px 0px;
         }
       }
-
+    
       .text-answer {
-        padding: 30px 0;
-
+        padding: 30px 0px;
+    
         p {
           font-size: 18px;
           font-weight: 100;
           color: #ccc;
           line-height: 1.7;
-          margin: 0;
+          margin: 0px;
         }
       }
-
+    
       .text-mindful {
-        p:first-child {
+        & p:first-child {
           font-size: 16px;
           font-weight: 600;
           text-transform: uppercase;
           animation: text-color-change 2s infinite;
+    
+          @keyframes text-color-change {
+            0% {color: red;}
+            33% {color: rgb(255, 0, 0);}
+            66% {color: rgb(255, 255, 255);}
+            100% {color: rgb(253, 253, 253);}
+          }
         }
-
-        p:last-child {
+    
+        & p:last-child {
           font-size: 18px;
           font-weight: 800;
-          color: $baseColor;
+          color: #fff;
           line-height: 1.7;
           letter-spacing: 0.5px;
         }
@@ -170,17 +184,27 @@ body {
       .anchor-container {
         overflow: hidden;
       }
-
+      
       .anchor {
         overflow: hidden;
-        transition: transform 0.5s;
-
+        transition: all .5s;
+      
         &:hover {
-          transform: scale(1.05);
+          scale: 1.05;
           cursor: pointer;
         }
-      }
 
+        @media (max-width: 1280px) {
+          .anchor-click {
+            max-width: 700px;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    
       @media (max-width: 1280px) {
         max-width: 450px;
 
@@ -239,16 +263,18 @@ body {
         }
       }
     }
-
-    .thumbnail-container, .thumbnail {
+    
+    /* css for image hover state */
+    .thumbnail-container {
       overflow: hidden;
     }
-
+    
     .thumbnail {
-      transition: transform 0.5s;
-
+      overflow: hidden;
+      transition: all .5s;
+    
       &:hover {
-        transform: scale(1.05);
+        scale: 1.05;
         cursor: pointer;
       }
 
@@ -258,7 +284,8 @@ body {
         }
       }
     }
-
+    
+    /* css for modal image */
     .modal {
       display: none;
       position: fixed;
@@ -280,7 +307,7 @@ body {
       .modal-image {
         max-width: 500px;
         height: auto;
-        border: 1px solid $baseColor;
+        border: 1px solid #fff;
       }
     }
 
@@ -295,27 +322,23 @@ body {
     }
 
     @media (max-width: 1280px) {
-      margin: 100px auto 130px;
+      margin-top: 100px;
+      margin-bottom: 130px;
     }
 
     @media (max-width: 640px) {
-      margin: 70px auto 100px;
+      margin-top: 70px;
+      margin-bottom: 100px;
     }
 
     @media (max-width: 420px) {
-      margin: 40px auto 70px;
+      margin-top: 40px;
+      margin-bottom: 70px;
     }
 
     @media (max-width: 330px) {
-      margin: 20px auto 50px;
+      margin-top: 20px;
+      margin-bottom: 50px;
     }
   }
 }
-
-@keyframes text-color-change {
-  0% { color: red; }
-  33% { color: rgb(255, 0, 0); }
-  66% { color: rgb(255, 255, 255); }
-  100% { color: rgb(253, 253, 253); }
-}
-  
